@@ -1,0 +1,52 @@
+/* Phare Studio · couleurs et polices de WOP (godot/scripts/ui/ui_kit.gd, assets/fonts) */
+@font-face{font-family:"Titan One";src:url(/fonts/titan-one.woff2) format("woff2");font-display:swap}
+@font-face{font-family:"Baloo 2";src:url(/fonts/baloo2.woff2) format("woff2");font-weight:400 800;font-display:swap}
+:root{--ink:#1E2A4A;--paper:#FFF6E6;--sand:#E6DCC6;--coral:#F2634E;--sun:#FFC531;--mint:#5FCB8A;--lagoon:#2EC4C9;--plum:#6C4BEF;
+--sky1:#1163B8;--sky2:#2985D3;--sky3:#56ABE0;--sky4:#9BD3F2}
+*{box-sizing:border-box}
+html{background:var(--sky1)}
+body{margin:0;color:var(--ink);font:18px/1.6 "Baloo 2",system-ui,-apple-system,"Segoe UI",sans-serif;
+background:linear-gradient(180deg,#1569BE 0,#2A86D2 110px,#3E98DB 260px,#56ABE0 520px,#7CC1EC 900px,var(--sky4) 1400px) no-repeat,var(--sky4);min-height:100vh}
+a{color:var(--plum);font-weight:600}
+.wrap{max-width:980px;margin:0 auto;padding:0 16px}
+.top{display:flex;align-items:center;gap:10px;padding:18px 0}
+.top a.marque{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font:22px "Titan One",sans-serif;letter-spacing:.02em;text-shadow:0 2px 0 rgba(30,42,74,.35)}
+.top .lang{margin-left:auto;color:#fff;font-weight:700;text-decoration:none;background:rgba(255,255,255,.18);padding:4px 14px;border-radius:999px}
+.phare{width:30px;height:30px;color:#fff}
+/* Accueil */
+.hero{text-align:center;padding:10px 0 34px;color:#fff}
+.logo{display:block;width:min(620px,100%);height:auto;margin:0 auto;
+-webkit-mask-image:radial-gradient(ellipse 50% 50% at 50% 50%,#000 78%,transparent 100%);mask-image:radial-gradient(ellipse 50% 50% at 50% 50%,#000 78%,transparent 100%)}
+.hero h1{font:clamp(30px,6vw,50px)/1.1 "Titan One",sans-serif;margin:4px 0 12px;color:#fff;-webkit-text-stroke:7px var(--ink);paint-order:stroke fill;text-shadow:0 5px 0 var(--ink)}
+.hero p{max-width:600px;margin:0 auto 22px;font-size:20px;font-weight:700;text-shadow:0 2px 0 var(--ink),0 0 8px rgba(30,42,74,.35)}
+.btn{display:inline-block;font:22px "Titan One",sans-serif;letter-spacing:.03em;text-transform:uppercase;text-decoration:none;color:var(--ink);
+background:var(--sun);border:4px solid var(--ink);border-radius:22px;padding:12px 28px;box-shadow:0 6px 0 var(--ink)}
+.btn small{display:block;font:600 14px "Baloo 2",sans-serif;text-transform:none;letter-spacing:0;margin-top:-2px}
+.carte-monde{margin:0 auto;max-width:860px;border:5px solid var(--ink);border-radius:28px;overflow:hidden;box-shadow:0 10px 0 var(--ink);background:var(--paper)}
+.carte-monde img{display:block;width:100%;height:auto}
+img{max-width:100%}
+.etapes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:46px 0 10px}
+.etape{background:var(--paper);border:4px solid var(--ink);border-radius:24px;padding:20px 20px 16px;box-shadow:0 6px 0 var(--ink)}
+.etape b.num{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;border:4px solid var(--ink);font:22px "Titan One",sans-serif;color:var(--ink)}
+.etape h3{font:22px/1.2 "Titan One",sans-serif;margin:10px 0 6px}
+.etape p{margin:0;font-size:17px}
+.n1{background:var(--sun)}.n2{background:var(--mint)}.n3{background:var(--lagoon)}
+/* Pages de texte */
+.papier{background:var(--paper);border:5px solid var(--ink);border-radius:28px;box-shadow:0 10px 0 var(--ink);padding:30px clamp(18px,5vw,44px) 26px;margin:6px 0 30px}
+.papier h1{font:clamp(28px,5vw,40px)/1.15 "Titan One",sans-serif;margin:0 0 6px}
+.papier h2{font:22px/1.25 "Titan One",sans-serif;margin:1.8em 0 .4em;color:var(--ink)}
+.papier .muted{color:#5d6683;font-size:15px}
+.papier .card{background:#fff;border:3px solid var(--sand);border-radius:18px;padding:12px 16px;margin:16px 0}
+table{width:100%;border-collapse:collapse;font-size:16px}
+th,td{text-align:left;vertical-align:top;padding:10px 8px;border-bottom:2px solid var(--sand)}
+th{font:15px "Titan One",sans-serif;font-weight:400;color:#5d6683}
+tr:last-child td{border-bottom:0}
+/* Pied */
+footer{padding:20px 0 40px;text-align:center;color:var(--ink);font-size:16px}
+footer a{color:var(--ink)}
+@media (max-width:720px){
+ .btn{font-size:18px;padding:10px 20px}
+ .hero p{font-size:18px}
+ .etapes{grid-template-columns:1fr}
+ table,thead,tbody,tr,th,td{display:block}thead{display:none}td{border:0;padding:3px 0}tr{border-bottom:2px solid var(--sand);padding:10px 0}
+}
